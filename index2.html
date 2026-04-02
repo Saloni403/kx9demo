@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Base button design */
+    .slick-prev,
+    .slick-next {
+      width: 35px;
+      height: 35px;
+      background: #7ed957;
+      /* green */
+      border-radius: 8px;
+      z-index: 999;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Remove default arrow */
+    .slick-prev:before,
+    .slick-next:before {
+      content: "" !important;
+    }
+
+    /* LEFT ARROW */
+    .slick-prev {
+      left: 20px !important;
+    }
+
+    .slick-prev::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      display: block;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(45deg);
+      /* makes perfect arrow */
+    }
+
+    /* RIGHT ARROW */
+    .slick-next {
+      right: 20px !important;
+    }
+
+    .slick-next::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      display: block;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(-45deg);
+    }
+
+    .slick-next:focus,
+    .slick-next:hover,
+    .slick-prev:focus,
+    .slick-prev:hover {
+      background: var(--clr-orng) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPESTNAV -->
+
+  <section class="topestnav py-2">
+    <div class="container d-sm-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3 leftsection">
+        <a href=""><i class="fa-solid fa-envelope"></i> <span>info@gmail.com</span></a>
+        <span class="text-white">|</span>
+        <a href=""><i class="fa-solid fa-phone"></i> <span>+91 8474626421</span></a>
+      </div>
+      <div class="d-flex align-items-center gap-3 rightsection mt-sm-0 mt-1">
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/logoecmrce.webp" alt="Bootstrap" width="140">
+        </a>
+
+        <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+
+            <!-- MEGA DROPDOWN -->
+            <li class="nav-item dropdown mega-menu">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Best Sellers
+              </a>
+
+              <div class="dropdown-menu mega-dropdown p-4">
+                <div class="row">
+
+                  <!-- Column 1 -->
+                  <div class="col">
+                    <h6 class="mega-title">Fruits</h6>
+                    <a href="#" class="mega-link">Apple</a>
+                    <a href="#" class="mega-link">Orange</a>
+                    <a href="#" class="mega-link">Plum</a>
+                    <a href="#" class="mega-link">Cherry</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col">
+                    <h6 class="mega-title">Vegetables</h6>
+                    <a href="#" class="mega-link">Beetroot</a>
+                    <a href="#" class="mega-link">Broccoli</a>
+                    <a href="#" class="mega-link">Potato</a>
+                    <a href="#" class="mega-link">Cucumber</a>
+                  </div>
+
+                  <!-- Column 3 -->
+                  <div class="col">
+                    <h6 class="mega-title">Grain Foods</h6>
+                    <a href="#" class="mega-link">Brown Rice</a>
+                    <a href="#" class="mega-link">Wheat</a>
+                    <a href="#" class="mega-link">Green Peas</a>
+                    <a href="#" class="mega-link">Horse Gram</a>
+                  </div>
+
+                  <!-- Column 4 -->
+                  <div class="col">
+                    <h6 class="mega-title">Meats</h6>
+                    <a href="#" class="mega-link">Chicken Breast</a>
+                    <a href="#" class="mega-link">Boneless Chicken</a>
+                    <a href="#" class="mega-link">Fish Curry</a>
+                    <a href="#" class="mega-link">Mushroom</a>
+                  </div>
+
+                </div>
+              </div>
+
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Deal Of The Day</a>
+            </li>
+
+            <li class="nav-item dropdown mega-menu">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About Us</a>
+
+              <div class="dropdown-menu mega-dropdown2">
+                <ul>
+                  <li><a href="">About Us</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a href="">Blogs</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a href="">FAQ's</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+
+          </ul>
+        </div>
+
+
+        <div class="d-flex gap-3 header-icons">
+
+          <a href="javascript:void(0);" onclick="showMenu(this);" class="d-lg-none menu-btn"><i
+              class="fa-solid fa-bars"></i></a>
+          <a href=""><i class="fa-solid fa-user"></i></a>
+          <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href=""><i class="fa-solid fa-heart"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-2">
+      <div class="row">
+        <div class="col-4 d-none d-md-block">
+          <div class="all-ctg-selection">
+            <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>All Categories</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <div class="all-ctg-menu dropdown">
+              <ul class="dropdown-menu">
+                <li><a href="" class="dropdown-item">Fruits</a></li>
+                <li><a href="" class="dropdown-item">Vegetables</a></li>
+                <li><a href="" class="dropdown-item">Flour</a></li>
+                <li><a href="" class="dropdown-item">Cookies</a></li>
+                <li><a href="" class="dropdown-item">Meat</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="h-100">
+            <div href="" class="search-box">
+              <input type="text" placeholder="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- menu on mobile view -->
+  <section class="mobile-menu d-lg-none d-block">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">Shop</a></li>
+      <li><a href="javascript:void(0);" class="d-flex align-items-center justify-content-between"
+          onclick="document.querySelector('.mobile-menu-sublist').classList.add('active')">Best Sellers<i
+            class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="">Deal Of The Day</a></li>
+      <li><a href="javascript:void(0);" class="d-flex align-items-center justify-content-between"
+          onclick="document.querySelector('.mobile-menu-sublist2').classList.add('active')">About Us<i
+            class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href=""><i class="fa-solid fa-user"></i> Login</a></li>
+    </ul>
+    <ul class="mobile-menu-sublist">
+      <li>
+        <h6 class="mega-title" onclick="document.querySelector('.mobile-menu-sublist').classList.remove('active')"><i
+            class="fa-solid fa-angle-left"></i> Best Sellers</h6>
+      </li>
+      <li><span class="ps-3">Fruits</span>
+        <ol>
+          <li><a href="#" class="mega-link">Apple</a></li>
+          <li><a href="#" class="mega-link">Orange</a></li>
+          <li><a href="#" class="mega-link">Plum</a></li>
+          <li><a href="#" class="mega-link">Cherry</a></li>
+        </ol>
+      </li>
+      <li><span class="ps-3">Fruits</span>
+        <ol>
+          <li><a href="#" class="mega-link">Apple</a></li>
+          <li><a href="#" class="mega-link">Orange</a></li>
+          <li><a href="#" class="mega-link">Plum</a></li>
+          <li><a href="#" class="mega-link">Cherry</a></li>
+        </ol>
+      </li>
+      <li><span class="ps-3">Fruits</span>
+        <ol>
+          <li><a href="#" class="mega-link">Apple</a></li>
+          <li><a href="#" class="mega-link">Orange</a></li>
+          <li><a href="#" class="mega-link">Plum</a></li>
+          <li><a href="#" class="mega-link">Cherry</a></li>
+        </ol>
+      </li>
+      <li><span class="ps-3">Fruits</span>
+        <ol>
+          <li><a href="#" class="mega-link">Apple</a></li>
+          <li><a href="#" class="mega-link">Orange</a></li>
+          <li><a href="#" class="mega-link">Plum</a></li>
+          <li><a href="#" class="mega-link">Cherry</a></li>
+        </ol>
+      </li>
+    </ul>
+    <ul class="mobile-menu-sublist2">
+      <li>
+        <h6 class="mega-title" onclick="document.querySelector('.mobile-menu-sublist2').classList.remove('active')"><i
+            class="fa-solid fa-angle-left"></i> About Us</h6>
+      </li>
+
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">FAQ's</a></li>
+
+    </ul>
+  </section>
+
+
+  <!-- banner slider -->
+  <section>
+    <div class="single-item">
+      <div class="banner-slider">
+        <img src="images/slider-3.webp" class="banner-img" alt="">
+        <div class="banner-slider-text">
+          <img src="images/slider-icon1.png" alt="">
+          <h6>100% Healthy & Affordable</h6>
+          <h1 class="">Organic Vegetables</h1>
+          <span>Small Changes Big Difference</span>
+          <div class="button1 mt-3">
+            <a href="">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-slider">
+        <img src="images/slider-2.webp" class="banner-img" alt="">
+        <div class="banner-slider-text2">
+          <p>GROCA</p>
+          <h1 class="">Vegetable 100% Organic</h1>
+          <h6>Natural Health Care Ingredients</h6>
+          <p>50% OFF</p>
+          <div class="button1 mt-3">
+            <a href="">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-slider">
+        <img src="images/slider-1.webp" class="banner-img" alt="">
+        <div class="banner-slider-text3">
+          <h6>Natural Health Care Ingredients</h6>
+          <h1 class="">Grocery Shopping</h1>
+          <p>Save upto 30% off</p>
+          <div class="button1 mt-3">
+            <a href="">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- small banners -->
+  <section class="small-banners-section my-5">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="small-banners-div small-banners-div1">
+            <img src="images/img-1smbnr.webp" class="img-fluid" alt="">
+            <div class="small-banners-text">
+              <h3>Veggies</h3>
+              <h5><b>100%</b> Organic <br> Products</h5>
+              <div class="button1 mt-3">
+                <a href="">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="small-banners-div small-banners-div2 ">
+            <img src="images/img-2smbnr.webp" class="img-fluid" alt="">
+            <div class="small-banners-text">
+              <h3>Fruits</h3>
+              <h5><b>100%</b> Fresh <br> Products</h5>
+              <div class="button1 mt-3">
+                <a href="">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- product section start -->
+  <section class="product-section my-5">
+    <div class="container">
+      <div class="hero-heading">
+        <h1>our products</h1>
+        <span>Soluta numquam delectus tempore mollitia ratione
+          eaque quam quos quidem, fuga illum!</span>
+      </div>
+      <div class="row gy-5 gx-1 product-category pb-5 overflow-hidden">
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+          <div class="product-category-card " data-category="all">
+            <img src="images/icon-6-pctg.webp" alt="">
+            <h5>All</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+          <div class="product-category-card " data-category="milk">
+            <img src="images/icon-6-pctg.webp" alt="">
+            <h5>Milk</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+          <div class="product-category-card " data-category="fruits">
+            <img src="images/icon-6-pctg.webp" alt="">
+            <h5>Fruits</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+          <div class="product-category-card " data-category="flour">
+            <img src="images/icon-6-pctg.webp" alt="">
+            <h5>Flour</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+          <div class="product-category-card " data-category="meat">
+            <img src="images/icon-6-pctg.webp" alt="">
+            <h5>Meat</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ">
+          <div class="product-category-card " data-category="vegetables">
+            <img src="images/icon-6-pctg.webp" alt="">
+            <h5>Vegetables</h5>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row g-3 products-card-section pt-4">
+        <div class="col-sm-6 col-lg-4 col-xl-3" data-category="milk">
+          <div class="product-card">
+
+            <!-- Discount Label -->
+            <div class="disc">Save 92%</div>
+
+            <!-- Icons -->
+            <div class="card-icons">
+              <div class="icon zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="icon wish"><i class="fa-solid fa-heart"></i></div>
+            </div>
+
+            <!-- Product Image -->
+            <img src="images/prd1.webp" alt="" />
+
+            <!-- Product Text -->
+            <div class="product-card-text">
+              <h6>Watermelon</h6>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+              <span class="price">
+                ₹700
+                <del>₹9400</del>
+              </span>
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xl-3" data-category="milk">
+          <div class="product-card">
+
+            <!-- Discount Label -->
+            <div class="disc">Save 92%</div>
+
+            <!-- Icons -->
+            <div class="card-icons">
+              <div class="icon zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="icon wish"><i class="fa-solid fa-heart"></i></div>
+            </div>
+
+            <!-- Product Image -->
+            <img src="images/prd2.webp" alt="" />
+
+            <!-- Product Text -->
+            <div class="product-card-text">
+              <h6>Watermelon</h6>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+              <span class="price">
+                ₹700
+                <del>₹9400</del>
+              </span>
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xl-3" data-category="vegetables">
+          <div class="product-card">
+
+            <!-- Discount Label -->
+            <div class="disc">Save 92%</div>
+
+            <!-- Icons -->
+            <div class="card-icons">
+              <div class="icon zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="icon wish"><i class="fa-solid fa-heart"></i></div>
+            </div>
+
+            <!-- Product Image -->
+            <img src="images/prd3.webp" alt="" />
+
+            <!-- Product Text -->
+            <div class="product-card-text">
+              <h6>Watermelon</h6>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+              <span class="price">
+                ₹700
+                <del>₹9400</del>
+              </span>
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xl-3" data-category="flour">
+          <div class="product-card">
+
+            <!-- Discount Label -->
+            <div class="disc">Save 92%</div>
+
+            <!-- Icons -->
+            <div class="card-icons">
+              <div class="icon zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="icon wish"><i class="fa-solid fa-heart"></i></div>
+            </div>
+
+            <!-- Product Image -->
+            <img src="images/prd4.webp" alt="" />
+
+            <!-- Product Text -->
+            <div class="product-card-text">
+              <h6>Watermelon</h6>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+              <span class="price">
+                ₹700
+                <del>₹9400</del>
+              </span>
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xl-3" data-category="fruits">
+          <div class="product-card">
+
+            <!-- Discount Label -->
+            <div class="disc">Save 92%</div>
+
+            <!-- Icons -->
+            <div class="card-icons">
+              <div class="icon zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="icon wish"><i class="fa-solid fa-heart"></i></div>
+            </div>
+
+            <!-- Product Image -->
+            <img src="images/prd5.webp" alt="" />
+
+            <!-- Product Text -->
+            <div class="product-card-text">
+              <h6>Watermelon</h6>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+              <span class="price">
+                ₹700
+                <del>₹9400</del>
+              </span>
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xl-3" data-category="meat">
+          <div class="product-card">
+
+            <!-- Discount Label -->
+            <div class="disc">Save 92%</div>
+
+            <!-- Icons -->
+            <div class="card-icons">
+              <div class="icon zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="icon wish"><i class="fa-solid fa-heart"></i></div>
+            </div>
+
+            <!-- Product Image -->
+            <img src="images/prd6.webp" alt="" />
+
+            <!-- Product Text -->
+            <div class="product-card-text">
+              <h6>Watermelon</h6>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+              <span class="price">
+                ₹700
+                <del>₹9400</del>
+              </span>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- below product banner -->
+  <section class="product-banner">
+      <img src="images/below-prd-banner.webp" alt="">
+      <div class="product-banner-text">
+        <h3>Special Discount For All Grocery Products</h3>
+        <p>Turpis tincidunt id aliquet risus feugiat. Pretium vulputate sapien nec sagittis aliquam. Ac tortor vitae
+          purus faucibus ornare suspendisse sed nisi. Amet risus nullam eget felis eget nunc lobortis mattis aliquam.
+        </p>
+        <div class="button1 mt-4">
+            <a href="">Shop Now</a>
+          </div>
+      </div>
+  </section>
+
+  <div class="body-overlay d-lg-none"></div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $('.single-item').slick();
+
+    // mobile menu section
+    function showMenu(event) {
+
+      var mybtn = event.querySelector("i");
+      mybtn.classList.toggle("fa-xmark");
+      mybtn.classList.toggle("fa-bars");
+      const overlay = document.querySelector(".body-overlay");
+
+      var mymenu = document.querySelector(".mobile-menu");
+      mymenu.classList.toggle("active");
+      overlay.classList.toggle("active")
+      document.body.classList.toggle("no-scroll");
+    }
+
+    // Hide menu on clicking outside
+    document.addEventListener("click", function (e) {
+      const menu = document.querySelector(".mobile-menu");
+      const btn = document.querySelector(".menu-btn"); // add class to your button
+      const overlay = document.querySelector(".body-overlay");
+
+      // If menu is open AND click is outside both menu + button
+      if (menu.classList.contains("active") && !menu.contains(e.target) && !btn.contains(e.target)) {
+
+        // hide menu
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+
+        // change icon back to bars
+        const icon = btn.querySelector("i");
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+
+
+
+    // product filter section
+    const categoryCards = document.querySelectorAll(".product-category-card");
+    const productCards = document.querySelectorAll(".products-card-section .col-sm-6");
+    categoryCards.forEach(card => {
+      card.addEventListener("click", () => {
+
+        const selectedCategory = card.getAttribute("data-category");
+
+        productCards.forEach(product => {
+          if (selectedCategory === "all" || product.getAttribute("data-category") === selectedCategory) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+
+        // Active class for category UI
+        categoryCards.forEach(c => c.classList.remove("active-category"));
+        card.classList.add("active-category");
+
+      });
+    });
+
+  </script>
+</body>
+
+</html>
